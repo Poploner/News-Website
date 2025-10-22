@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-
+import Header from "./Header"
 export default function Tech() {
   const savedNews = JSON.parse(localStorage.getItem("techNews")) || []
   const [techNews, setTechNews] = useState(savedNews)
@@ -7,7 +7,7 @@ export default function Tech() {
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?category=technology&apiKey=70b525d261a74a90a2a95c8fbe5c6eb2"
+      "https://newsapi.org/v2/top-headlines?category=technology&apiKey=aa754d4982324255903c14860f2150b4"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -21,6 +21,8 @@ export default function Tech() {
   }, [])
 
   return (
+    <>
+    <Header />
     <div className="news-content">
       {loading ? (
         <p>Loading technology news...</p>
@@ -44,6 +46,7 @@ export default function Tech() {
         <p>No news articles found.</p>
       )}
     </div>
+    </>
   )
 }
 

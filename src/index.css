@@ -1,5 +1,11 @@
+/* @import "tailwindcss"; */
 *{
     box-sizing: border-box;
+}
+body{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 .news-content {
   display: flex;
@@ -21,7 +27,7 @@
 }
 
 .news-image {
-  width: 60%;
+  max-width: 60%;
   
 }
 
@@ -33,7 +39,7 @@
 
 .news-text {
   flex: 2;
-  padding: 1.5rem;
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,7 +54,7 @@
 .news-title {
   font-size: 1.75rem;
   font-weight: 800;
-  color: blue;
+  color: rgb(50, 50, 247);
   margin-bottom: 1rem;
 }
 
@@ -61,10 +67,67 @@
 
 .news-text a {
   text-decoration: none;
-  color: blue;
+  color: rgb(50, 50, 247);
   font-weight: 600;
 }
 .news-text a:hover{
     letter-spacing: 1px;
   transform: scale(1);
+}
+
+@media (max-width: 900px) {
+    .news-title{
+        font-size: 1rem;
+    }
+    .news-description{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .news-title{
+        font-size: 0.9rem;
+        /* color: blue; */
+    }
+    .news-description{
+        font-size: 0.7rem;
+    }
+    .news-image{
+        width: 40%;
+    }
+}
+
+@media (max-width: 899px) {
+    .news-title{
+        font-size: 0.9rem;
+        /* color: blue; */
+    }
+    .news-description{
+        font-size: 0.7rem;
+    }
+    .news-image{
+        width: 40%;
+    }
+}
+.nav{
+    display: flex;
+    gap: 1rem;
+}
+.nav-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+header{
+    background-color: rgb(50, 50, 247);
+    height: 20vh;
+    display: flex;
+    padding: 20px;
+    gap: 50%;
+    align-items: center;
+}
+.web-name{
+    font-size: 1.75rem;
+    font-weight: 1000;
+    color: #fff;
 }
