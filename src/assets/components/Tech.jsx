@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-
+import Header from "./Header"
 export default function Tech() {
   const savedNews = JSON.parse(localStorage.getItem("techNews")) || []
   const [techNews, setTechNews] = useState(savedNews)
@@ -21,6 +21,8 @@ export default function Tech() {
   }, [])
 
   return (
+    <>
+    <Header />
     <div className="news-content">
       {loading ? (
         <p>Loading technology news...</p>
@@ -44,6 +46,7 @@ export default function Tech() {
         <p>No news articles found.</p>
       )}
     </div>
+    </>
   )
 }
 

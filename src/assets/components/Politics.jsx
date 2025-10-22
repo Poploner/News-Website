@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import Header from "./Header";
 export default function Politics () {
 
     const savedNews = JSON.parse(localStorage.getItem("politicsNews")) || []
@@ -21,7 +21,8 @@ useEffect(() => {
       .finally(() => setLoading(false))
   }, [])
     return(
-
+        <>
+        <Header />
         <div className="news-content">
       {loading ? (
         <p>Loading politics news...</p>
@@ -45,6 +46,6 @@ useEffect(() => {
         <p>No news articles found.</p>
       )}
     </div>
-    
+    </>
     )
 }
