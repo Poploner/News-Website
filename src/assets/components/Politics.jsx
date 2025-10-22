@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import Header from "./Header";
 export default function Politics () {
 
     const savedNews = JSON.parse(localStorage.getItem("politicsNews")) || []
@@ -8,7 +8,7 @@ export default function Politics () {
 
 useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?category=politics&apiKey=70b525d261a74a90a2a95c8fbe5c6eb2"
+      "https://newsapi.org/v2/top-headlines?category=politics&apiKey=aa754d4982324255903c14860f2150b4"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -21,7 +21,8 @@ useEffect(() => {
       .finally(() => setLoading(false))
   }, [])
     return(
-
+        <>
+        <Header />
         <div className="news-content">
       {loading ? (
         <p>Loading politics news...</p>
@@ -45,6 +46,6 @@ useEffect(() => {
         <p>No news articles found.</p>
       )}
     </div>
-    
+    </>
     )
 }

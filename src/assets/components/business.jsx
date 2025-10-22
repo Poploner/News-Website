@@ -1,15 +1,14 @@
-import Header from "./Header";
 import { useEffect, useState } from "react";
-
-export default function Hailth() {
+import Header from "./Header";
+export default function Business() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchHealthNews() {
+    async function fetchBusinessNews() {
       try {
         const res = await fetch(
-          `https://newsapi.org/v2/top-headlines?category=Health&country=us&apiKey=cceb63c938f24c08bfd3e2917932316e`
+          `https://newsapi.org/v2/top-headlines?category=Business&country=us&apiKey=aa754d4982324255903c14860f2150b4`
         );
         const data = await res.json();
         setArticles(data.articles || []);
@@ -19,13 +18,13 @@ export default function Hailth() {
         setLoading(false);
       }
     }
-    fetchHealthNews();
+    fetchBusinessNews();
   }, []);
 
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen text-lg text-gray-500">
-        Loading Health news...
+        Loading Business news...
       </div>
     );
   }
@@ -33,7 +32,7 @@ export default function Hailth() {
   return (
     <>
     <Header/>
-    <div className="px-[100px]  min-h-screen text-blue py-10">
+    <div className="px-[100px] bg-gray-50 min-h-screen text-blue py-10">
       {articles.length === 0 ? (
         <p className="text-center text-blue-400">No Business articles available.</p>
       ) : (
@@ -41,25 +40,25 @@ export default function Hailth() {
           {articles.map((article, index) => (
             <div
               key={index}
-              className=" rounded-xl shadow-lg overflow-hidden hover:shadow-sm transition duration-300"
+              className="bg-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition duration-300"
             >
               {article.urlToImage && (
                 <img
                   src={article.urlToImage}
                   alt={article.title}
-                  className="w-full h-[50%] object-cover"
+                  className="w-full  h-[300px] object-cover"
                 />
               )}
               <div className="p-4">
-                <h2 className="text-md text-[#0000ff]  font-semibold mb-2">{article.title}</h2>
-                <p className="text-gray-400 text-sm mb-3">
+                <h2 className="text-xl font-semibold mb-2">{article.title}</h2>
+                <p className="text-[#0000ff] text-sm mb-3">
                   {article.description || "No description available."}
                 </p>
                 <a
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mb-6 text-[#0000ff] hover:underline "
+                  className="text-[#0000ff] hover:underline"
                 >
                   Read more →
                 </a>
@@ -69,6 +68,6 @@ export default function Hailth() {
         </div>
       )}
     </div>
-    </>
+   </>
   );
 }
