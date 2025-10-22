@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Header from "./Header";
+
 
 export default function Sports() {
   const [articles, setArticles] = useState([]);
@@ -30,7 +32,8 @@ export default function Sports() {
   }
 
   return (
-    <div className="px-[100px] bg-gray-50 min-h-screen text-blue">
+            <>
+            <Header /><div className="px-[100px] bg-gray-50 min-h-screen text-blue">
       <h1 className="text-3xl font-bold mb-6 text-center">Sport News</h1>
       {articles.length === 0 ? (
         <p className="text-center text-blue-400">No Sport articles available.</p>
@@ -45,8 +48,7 @@ export default function Sports() {
                 <img
                   src={article.urlToImage}
                   alt={article.title}
-                  className="w-full h-[300px] object-cover"
-                />
+                  className="w-full h-[300px] object-cover" />
               )}
               <div className="p-4">
                 <h2 className="text-lg text-[#0000ff] font-semibold mb-2">{article.title}</h2>
@@ -66,6 +68,6 @@ export default function Sports() {
           ))}
         </div>
       )}
-    </div>
+    </div></>
   );
 }
