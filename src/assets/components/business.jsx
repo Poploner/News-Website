@@ -8,7 +8,7 @@ export default function Business() {
     async function fetchBusinessNews() {
       try {
         const res = await fetch(
-          `https://newsapi.org/v2/top-headlines?category=Business&country=us&apiKey=70b525d261a74a90a2a95c8fbe5c6eb2`
+          `https://newsapi.org/v2/top-headlines?category=Business&country=us&apiKey=aa754d4982324255903c14860f2150b4`
         );
         const data = await res.json();
         setArticles(data.articles || []);
@@ -30,9 +30,7 @@ export default function Business() {
   }
 
   return (
-    <>
-    <Header />
-    <div className="px-[100px] bg-gray-100 min-h-screen text-blue">
+    <div className="px-[100px] bg-gray-50 min-h-screen text-blue">
       <h1 className="text-3xl font-bold mb-6 text-center">Business News</h1>
       {articles.length === 0 ? (
         <p className="text-center text-blue-400">No Business articles available.</p>
@@ -41,25 +39,25 @@ export default function Business() {
           {articles.map((article, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-purple-500/30 transition duration-300"
+              className="bg-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-purple-500/30 transition duration-300"
             >
               {article.urlToImage && (
                 <img
                   src={article.urlToImage}
                   alt={article.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full  h-[300px] object-cover"
                 />
               )}
               <div className="p-4">
                 <h2 className="text-xl font-semibold mb-2">{article.title}</h2>
-                <p className="text-gray-400 text-sm mb-3">
+                <p className="text-[#0000ff] text-sm mb-3">
                   {article.description || "No description available."}
                 </p>
                 <a
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-purple-400 hover:underline"
+                  className="text-[#0000ff] hover:underline"
                 >
                   Read more →
                 </a>
@@ -69,6 +67,6 @@ export default function Business() {
         </div>
       )}
     </div>
-    </>
+    // </>
   );
 }
