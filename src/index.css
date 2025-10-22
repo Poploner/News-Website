@@ -119,7 +119,7 @@ body{
     font-size: 1.2rem;
 }
 header{
-    background-color: rgb(50, 50, 247);
+    /* background-color: rgb(50, 50, 247); */
     height: 17vh;
     display: flex;
     padding: 20px;

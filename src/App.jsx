@@ -5,11 +5,13 @@ import Sports from "./assets/components/Sport"
 import Business from "./assets/components/business"
 import Home from "./assets/components/Home"
 import Hailth from "./assets/components/Hailth"
+import Footer from "./assets/components/Footer"
 export default function App () {
     return (
 
         <>
             <Routes>
+                <Route path="/" element={<Footer />} />
                 <Route index element={<Politics />} />
                 <Route path="/home" element={<Home />}/>
                  <Route path="/health" element={<Hailth />}/>

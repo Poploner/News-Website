@@ -3,7 +3,7 @@ import { Link } from "react-router";
 export default function Header () {
 
     return (
-        <header className="px-[100px]">
+        <header className="px-[100px] bg-blue-800">
             <div>
                 <h1 className="">Today<span className="web-name"> NEWS</span></h1>
             </div>
