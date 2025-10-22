@@ -45,12 +45,12 @@ export default function Sports() {
                 <img
                   src={article.urlToImage}
                   alt={article.title}
-                  className="w-full h-[300px] object-cover"
+                  className="w-full h-48 object-cover"
                 />
               )}
               <div className="p-4">
-                <h2 className="text-lg text-[#0000ff] font-semibold mb-2">{article.title}</h2>
-                <p className="text-gray-600 text-sm mb-3">
+                <h2 className="text-xl text-[#0000ff] font-semibold mb-2">{article.title}</h2>
+                <p className="text-gray text-sm mb-3">
                   {article.description || "No description available."}
                 </p>
                 <a
