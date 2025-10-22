@@ -1,15 +1,11 @@
-import News from "../News"
-import NewsCard from "../NewsCard"
+import Tech from "./assets/components/Tech"
+import Politics from "./assets/components/Politics"
+export default function App () {
+    return (
 
-function App() {
- 
-
-  return (
-    <>
-      <News/>
-       <NewsCard/>
-    </>
-  )
+        <>
+            <Politics />
+            <Tech />
+        </>
+    )
 }
-
-export default App
