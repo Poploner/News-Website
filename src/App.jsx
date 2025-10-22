@@ -11,7 +11,7 @@ export default function App () {
         <>
             <Routes>
                 <Route index element={<Politics />} />
-                <Route path="/home" element={<Home />}/>
+                <Route path="/Home" element={<Home />}/>
                  <Route path="/health" element={<Hailth />}/>
                 <Route path="/Tech" element={<Tech />}/>
                 <Route path="/Sports" element={<Sports />}/>
