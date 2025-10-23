@@ -1,5 +1,4 @@
-// import React, { useEffect, useState } from "react";
-// import Home2ca from "./Home2ca";
+
 import React, { useEffect, useState } from "react";
 import Home2ca from "./Home2ca";
 
