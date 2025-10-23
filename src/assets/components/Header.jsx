@@ -3,16 +3,17 @@ import { Link } from "react-router";
 export default function Header () {
 
     return (
-        <header>
+        <header className="px-[100px] bg-blue-800">
             <div>
-                <h1>Today<span className="web-name"> NEWS</span></h1>
+                <h1 className="">Today<span className="web-name"> NEWS</span></h1>
             </div>
-            <div className="nav">
-                <Link className="nav-link" to="/Politics">Politics</Link >
-                <Link className="nav-link" to="/Tech">Tech</Link >
-                <Link className="nav-link" to="/business">Business</Link >
-                <Link className="nav-link" to="/health">Health</Link >
-                <Link className="nav-link" to="/sports">Sport</Link >
+            <div className="nav ml-[100px] ">
+                <Link className="nav-link hover:font-bold hover:underline hover:scale-110" to="/home">Home</Link >
+                <Link className="nav-link hover:font-bold hover:underline hover:scale-110" to="/Tech">Tech</Link >
+                <Link className="nav-link hover:font-bold hover:underline hover:scale-110" to="/Politics">Politics</Link >
+                <Link className="nav-link hover:font-bold hover:underline hover:scale-110" to="/business">Business</Link >
+                <Link className="nav-link hover:font-bold hover:underline hover:scale-110" to="/health">Health</Link >
+                <Link className="nav-link hover:font-bold hover:underline hover:scale-110" to="/sports">Sport</Link >
             </div>
         </header>
     )

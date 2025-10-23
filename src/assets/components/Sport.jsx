@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
+import Footer from "./Footer"
+
 
 
 export default function Sports() {
@@ -33,8 +35,8 @@ export default function Sports() {
 
   return (
             <>
-            <Header /><div className="px-[100px] bg-gray-50 min-h-screen text-blue">
-      <h1 className="text-3xl font-bold mb-6 text-center">Sport News</h1>
+            <Header />
+            <div className="px-[100px] bg-gray-50 min-h-screen text-blue py-10">
       {articles.length === 0 ? (
         <p className="text-center text-blue-400">No Sport articles available.</p>
       ) : (
@@ -42,7 +44,7 @@ export default function Sports() {
           {articles.map((article, index) => (
             <div
               key={index}
-              className="bg-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-purple-500/30 transition duration-300"
+              className="bg-gray-200 rounded-xl shadow-lg overflow-hidden hover:scale-102 hover:shadow-lg transition duration-300"
             >
               {article.urlToImage && (
                 <img
@@ -68,6 +70,8 @@ export default function Sports() {
           ))}
         </div>
       )}
-    </div></>
+    </div>
+            <Footer />
+            </>
   );
 }
