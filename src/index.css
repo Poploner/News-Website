@@ -137,3 +137,6 @@ header>div{
 .box{
   margin-bottom: 0;
 }
+html, body {
+  overflow-x: hidden;
+}
