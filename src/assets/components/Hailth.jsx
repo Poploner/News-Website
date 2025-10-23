@@ -33,7 +33,7 @@ export default function Hailth() {
 
   return (
     <>
-    <Header/>
+    
     <div className="px-[100px]  min-h-screen text-blue py-10">
       {articles.length === 0 ? (
         <p className="text-center text-blue-400">No Business articles available.</p>
@@ -70,7 +70,7 @@ export default function Hailth() {
         </div>
       )}
     </div>
-    <Footer/>
+    
     </>
   );
 }

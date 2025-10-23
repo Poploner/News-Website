@@ -33,7 +33,7 @@ export default function Politics () {
   }
     return(
         <>
-                <Header/>
+                
                 <div className="px-[100px] bg-gray-50 min-h-screen text-blue py-10">
                   {articles.length === 0 ? (
                     <p className="text-center text-blue-400">No Politics News available.</p>
@@ -70,7 +70,7 @@ export default function Politics () {
                     </div>
                   )}
                 </div>
-                <Footer/>
+                
                </>
     )
 }

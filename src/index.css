@@ -126,8 +126,14 @@ header{
     gap: 50%;
     align-items: center;
 }
+header>div{
+  display: flex;
+}
 .web-name{
     font-size: 1.75rem;
     font-weight: 1000;
     color: #fff;
+}
+.box{
+  margin-bottom: 0;
 }
