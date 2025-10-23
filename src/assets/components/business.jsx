@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer"
+
 
 export default function Business() {
   const [articles, setArticles] = useState([]);

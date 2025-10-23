@@ -1,5 +1,4 @@
-import Footer from "./Footer"
-import Header from "./Header";
+
 import { useEffect, useState } from "react";
 
 export default function Hailth() {
@@ -48,7 +47,7 @@ export default function Hailth() {
                 <img
                   src={article.urlToImage}
                   alt={article.title}
-                  className="w-full h-[300px] object-cover"
+                  className="w-full h-[300px] object-cover text-white"
                 />
               )}
               <div className="p-4">

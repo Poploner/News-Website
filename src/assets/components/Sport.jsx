@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer"
+
 
 
 
@@ -36,7 +35,7 @@ export default function Sports() {
   return (
             <>
             
-            <div className=" px-4 sm:px-8 md:px12 lg: px-[100px]  min-h-screen text-blue py-10 dark:bg-gray-900">
+            <div className=" px-4 sm:px-8 md:px12 lg:px-[100px]  min-h-screen text-blue py-10 dark:bg-gray-900">
       {articles.length === 0 ? (
         <p className="text-center text-blue-400">No Sport articles available.</p>
       ) : (

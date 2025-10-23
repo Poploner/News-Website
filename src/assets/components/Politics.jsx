@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer"
 export default function Politics () {
 
     // const savedNews = JSON.parse(localStorage.getItem("politicsNews")) || []

@@ -21,7 +21,7 @@ export default function App () {
             <Route path="/tech" element={<Tech />} />
             <Route path="/sports" element={<Sports />} />
             <Route path="/business" element={<Business />} />
-      </Routes>
+            </Routes>
             <Footer />
             
         </>
