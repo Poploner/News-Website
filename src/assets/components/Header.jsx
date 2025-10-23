@@ -10,9 +10,9 @@ export default function Header () {
             <div className="nav">
                 <Link className="nav-link" to="/Politics">Politics</Link >
                 <Link className="nav-link" to="/Tech">Tech</Link >
-                <Link className="nav-link" to="/Politics">Business</Link >
-                <Link className="nav-link" to="/Politics">Health</Link >
-                <Link className="nav-link" to="/Politics">Sport</Link >
+                <Link className="nav-link" to="/business">Business</Link >
+                <Link className="nav-link" to="/health">Health</Link >
+                <Link className="nav-link" to="/sports">Sport</Link >
             </div>
         </header>
     )
