@@ -7,11 +7,13 @@ import Home from "./assets/components/Home"
 import Hailth from "./assets/components/Hailth"
 import Footer from "./assets/components/Footer"
 import Header from "./assets/components/Header"
+import ScrollToTop from "./assets/components/Scroll"
 export default function App () {
     return (
 
         <>
             <Header />
+            <ScrollToTop />
             <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/politics" element={<Politics />} />
