@@ -9,7 +9,7 @@ export default function Hailth() {
     async function fetchHealthNews() {
       try {
         const res = await fetch(
-          `https://newsapi.org/v2/top-headlines?category=Health&country=us&apiKey=cceb63c938f24c08bfd3e2917932316e`
+          `https://newsapi.org/v2/top-headlines?category=Health&country=us&apiKey=70b525d261a74a90a2a95c8fbe5c6eb2`
         );
         const data = await res.json();
         setArticles(data.articles || []);
@@ -47,7 +47,7 @@ export default function Hailth() {
                 <img
                   src={article.urlToImage}
                   alt={article.title}
-                  className="w-full h-[300px] object-cover"
+                  className="w-full h-[300px] object-cover text-white"
                 />
               )}
               <div className="p-4">
