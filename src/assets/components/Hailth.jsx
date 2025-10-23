@@ -1,3 +1,4 @@
+import Footer from "./Footer"
 import Header from "./Header";
 import { useEffect, useState } from "react";
 
@@ -69,6 +70,7 @@ export default function Hailth() {
         </div>
       )}
     </div>
+    <Footer/>
     </>
   );
 }

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
+import Footer from "./Footer"
+
 
 
 export default function Sports() {
@@ -68,6 +70,8 @@ export default function Sports() {
           ))}
         </div>
       )}
-    </div></>
+    </div>
+            <Footer />
+            </>
   );
 }

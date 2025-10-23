@@ -31,6 +31,14 @@ export default function Home2ca() {
               <h4 className="text-sm font-bold text-gray-900 dark:text-white hover:text-blue-600 line-clamp-2">
                 {item.title}
               </h4>
+               <a
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-600 mt-3 inline-block font-medium hover:underline"
+              >
+                Read more →
+              </a>
             </div>
           </div>
         </div>
