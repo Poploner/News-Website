@@ -36,7 +36,7 @@ export default function Sports() {
   return (
             <>
             
-            <div className="px-[100px] bg-gray-50 min-h-screen text-blue py-10">
+            <div className="px-[100px] bg-gray-50 min-h-screen text-blue py-10 dark:bg-gray-900">
       {articles.length === 0 ? (
         <p className="text-center text-blue-400">No Sport articles available.</p>
       ) : (
@@ -44,7 +44,7 @@ export default function Sports() {
           {articles.map((article, index) => (
             <div
               key={index}
-              className="bg-gray-200 rounded-xl shadow-lg overflow-hidden hover:scale-102 hover:shadow-lg transition duration-300"
+              className="bg-gray-200 rounded-xl shadow-lg overflow-hidden hover:scale-102 hover:shadow-lg  dark:bg-gray-800 transition duration-300"
             >
               {article.urlToImage && (
                 <img
@@ -53,15 +53,15 @@ export default function Sports() {
                   className="w-full h-[300px] object-cover" />
               )}
               <div className="p-4">
-                <h2 className="text-lg text-[#0000ff] font-semibold mb-2">{article.title}</h2>
-                <p className="text-gray-600 text-sm mb-3">
+                <h2 className="text-lg text-[#0000ff] dark:text-white font-semibold mb-2">{article.title}</h2>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
                   {article.description || "No description available."}
                 </p>
                 <a
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#0000ff] hover:underline"
+                  className="text-[#0000ff] dark:text-blue-600 hover:underline"
                 >
                   Read more →
                 </a>

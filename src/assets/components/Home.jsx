@@ -1,4 +1,4 @@
-  import HomeCard from "./HomeCard"
+import HomeCard from "./HomeCard"
 import Header from "./Header"
 import Footer from "./Footer"
 

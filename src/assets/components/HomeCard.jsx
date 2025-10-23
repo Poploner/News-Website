@@ -52,8 +52,6 @@ export default function HomeCard() {
           </div>
         ))}
       </div>
-
-      
       <Home2ca />
     </>
   );
