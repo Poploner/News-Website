@@ -68,7 +68,7 @@ export default function Header() {
             <Link className="hover:font-bold hover:scale-110 block" to="/Business">Business</Link>
           </li>
           <li>
-            <Link className="hover:font-bold hover:scale-110 block" to="/Health">Health</Link>
+            <Link className="hover:font-bold hover:scale-110 block" to="/Hailth">Health</Link>
           </li>
           <li>
             <Link className="hover:font-bold hover:scale-110 block" to="/Sports">Sports</Link>

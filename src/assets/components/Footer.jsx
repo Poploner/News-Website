@@ -32,7 +32,7 @@ export default function Footer() {
             <Link className="hover:font-bold cursor-pointer" to="/Tech">Tech</Link>
             <Link className="hover:font-bold cursor-pointer" to="/Politics">Politics</Link>
             <Link className="hover:font-bold cursor-pointer" to="/business">Business</Link>
-            <Link className="hover:font-bold cursor-pointer" to="/health">Health</Link>
+            <Link className="hover:font-bold cursor-pointer" to="/hailth">Health</Link>
             <Link className="hover:font-bold cursor-pointer" to="/sports">Sport</Link>
           </div>
         </div>
