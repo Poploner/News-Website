@@ -3,7 +3,7 @@ import { Link } from "react-router";
 export default function Header () {
 
     return (
-        <header className="px-[100px] bg-blue-800">
+        <header className="px-[100px] bg-blue-800 dark:bg-blue-600 flex justify-between items-center">
             <div>
                 <h1 className="">Today<span className="web-name"> NEWS</span></h1>
             </div>

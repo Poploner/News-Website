@@ -34,7 +34,7 @@ export default function Business() {
   return (
     <>
     <Header/>
-    <div className="px-[100px] bg-gray-50 min-h-screen text-blue py-10">
+    <div className="px-[100px] bg-gray-50 min-h-screen text-blue py-10 dark:bg-gray-900">
       {articles.length === 0 ? (
         <p className="text-center text-blue-400">No Business articles available.</p>
       ) : (
@@ -42,7 +42,7 @@ export default function Business() {
           {articles.map((article, index) => (
             <div
               key={index}
-              className="bg-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition duration-300"
+              className="bg-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition duration-300 dark:bg-gray-800"
             >
               {article.urlToImage && (
                 <img
@@ -52,15 +52,15 @@ export default function Business() {
                 />
               )}
               <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2">{article.title}</h2>
-                <p className="text-[#0000ff] text-sm mb-3">
+                <h2 className="text-xl dark:text-white font-semibold mb-2">{article.title}</h2>
+                <p className="text-[#0000ff] dark:text-gray-400 text-sm mb-3">
                   {article.description || "No description available."}
                 </p>
                 <a
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#0000ff] hover:underline"
+                  className="text-blue-600 hover:underline"
                 >
                   Read more →
                 </a>
