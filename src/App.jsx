@@ -6,20 +6,23 @@ import Business from "./assets/components/business"
 import Home from "./assets/components/Home"
 import Hailth from "./assets/components/Hailth"
 import Footer from "./assets/components/Footer"
+import Header from "./assets/components/Header"
+import ScrollToTop from "./assets/components/Scroll"
 export default function App () {
     return (
 
         <>
+            <Header />
+            <ScrollToTop />
             <Routes>
-                <Route path="/" element={<Footer />} />
-                <Route path="/Politics" element={<Politics />} />
-                <Route path="/Home" element={<Home />}/>
-                 <Route path="/health" element={<Hailth />}/>
-                <Route path="/Tech" element={<Tech />}/>
-                <Route path="/Sports" element={<Sports />}/>
-                <Route path="/Business" element={<Business />}/>
-            </Routes>
-            
+            <Route path="/" element={<Home />} />
+            <Route path="/politics" element={<Politics />} />
+            <Route path="/hailth" element={<Hailth />} />
+            <Route path="/tech" element={<Tech />} />
+            <Route path="/sports" element={<Sports />} />
+            <Route path="/business" element={<Business />} />
+      </Routes>
+            <Footer />
             
         </>
     )
