@@ -8,7 +8,7 @@ export default function HomeCard() {
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?category=technology&country=us&apiKey=cceb63c938f24c08bfd3e2917932316e"
+      "https://newsapi.org/v2/top-headlines?category=technology&country=us&apiKey=70b525d261a74a90a2a95c8fbe5c6eb2"
     )
       .then((res) => res.json())
       .then((data) => setArticles(data.articles))
