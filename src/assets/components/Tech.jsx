@@ -34,11 +34,11 @@ export default function Tech() {
   return (
     <>
         
-        <div className="px-[100px] bg-gray-50 min-h-screen text-blue py-10 dark:bg-gray-900">
+        <div className=" px-4 sm:px-8 md:px12 lg: px-[100px]  min-h-screen text-blue py-10 dark:bg-gray-900">
           {articles.length === 0 ? (
             <p className="text-center text-blue-400">No Tech News available.</p>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6 ">
               {articles.map((article, index) => (
                 <div
                   key={index}
@@ -52,8 +52,8 @@ export default function Tech() {
                     />
                   )}
                   <div className="p-4">
-                    <h2 className="text-xl  dark:text-white font-semibold mb-2">{article.title}</h2>
-                    <p className="text-[#0000ff] dark:text-gray-400 text-sm mb-3">
+                    <h2 className="text-lg  sm:text-xl font-semibold  mb-2 dark:text-white">{article.title}</h2>
+                    <p className="text-sm sm:text-base text-[#0000ff] dark:text-gray-400 text-sm mb-3">
                       {article.description || "No description available."}
                     </p>
                     <a
