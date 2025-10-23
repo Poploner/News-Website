@@ -53,13 +53,8 @@ export default function Sports() {
                   className="w-full h-[300px] object-cover" />
               )}
               <div className="p-4">
-<<<<<<< HEAD
                 <h2 className="text-xl text-[#0000ff] font-semibold mb-2">{article.title}</h2>
                 <p className="text-gray text-sm mb-3">
-=======
-                <h2 className="text-lg text-[#0000ff] dark:text-white font-semibold mb-2">{article.title}</h2>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
->>>>>>> 4981fe4443ea115a4de40efee3d9c81224808aec
                   {article.description || "No description available."}
                 </p>
                 <a
