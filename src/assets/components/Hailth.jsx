@@ -41,13 +41,13 @@ export default function Hailth() {
           {articles.map((article, index) => (
             <div
               key={index}
-              className="bg-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition duration-300  dark:bg-gray-800"
+              className="bg-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition duration-300  dark:bg-gray-800 "
             >
               {article.urlToImage && (
                 <img
                   src={article.urlToImage}
                   alt={article.title}
-                  className="w-full h-[300px] object-cover text-white"
+                  className="w-full  h-[300px] sm:h-[200px] lg:h-[200px] object-cover text-white"
                 />
               )}
               <div className="p-4">

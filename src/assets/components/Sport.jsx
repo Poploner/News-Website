@@ -49,7 +49,7 @@ export default function Sports() {
                 <img
                   src={article.urlToImage}
                   alt={article.title}
-                  className="w-full h-[300px] object-cover" />
+                  className="w-full  h-[300px] sm:h-[200px] lg:h-[200px] object-cover text-white" />
               )}
               <div className="p-4">
                 <h2 className="text-lg  sm:text-xl font-semibold  mb-2 dark:text-white">{article.title}</h2>

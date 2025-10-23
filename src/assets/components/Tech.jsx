@@ -47,7 +47,7 @@ export default function Tech() {
                     <img
                       src={article.urlToImage}
                       alt={article.title}
-                      className="w-full  h-[300px] object-cover"
+                      className="w-full  h-[300px] sm:h-[200px] lg:h-[200px] object-cover text-white"
                     />
                   )}
                   <div className="p-4">
