@@ -5,7 +5,7 @@ export default function Home2ca() {
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?category=us&apiKey=cceb63c938f24c08bfd3e2917932316e"
+      "https://newsapi.org/v2/top-headlines?category=business&apiKey=cceb63c938f24c08bfd3e2917932316e"
     )
       .then((res) => res.json())
       .then((data) => setArticles(data.articles))
@@ -13,7 +13,7 @@ export default function Home2ca() {
   }, []);
 
   return (
-    <div className="w-[100%] md:w-[30%] bg-white dark:bg-gray-800 rounded-xl shadow p-4">
+    <div className="w-[60%] md:w-[30%] bg-white dark:bg-gray-800 rounded-xl shadow p-4">
       {articles.slice(0, 6).map((item, index) => (
         <div key={index} className="mb-4 border-b pb-3">
           <div className="flex items-start gap-3">
@@ -38,3 +38,8 @@ export default function Home2ca() {
     </div>
   );
 }
+
+
+
+
+

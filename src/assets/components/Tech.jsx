@@ -2,51 +2,73 @@ import { useEffect, useState } from "react"
 import Header from "./Header"
 export default function Tech() {
   const savedNews = JSON.parse(localStorage.getItem("techNews")) || []
-  const [techNews, setTechNews] = useState(savedNews)
-  const [loading, setLoading] = useState(true)
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(
-      "https://newsapi.org/v2/top-headlines?category=technology&apiKey=aa754d4982324255903c14860f2150b4"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        if (data && data.articles) {
-          setTechNews(data.articles)
-          localStorage.setItem("techNews", JSON.stringify(data.articles))
-        }
-      })
-      .catch((err) => console.error("Error fetching news:", err))
-      .finally(() => setLoading(false))
-  }, [])
+    async function fetchTechNews() {
+      try {
+        const res = await fetch(
+          `https://newsapi.org/v2/top-headlines?category=technology&country=us&apiKey=aa754d4982324255903c14860f2150b4`
+        );
+        const data = await res.json();
+        setArticles(data.articles || []);
+      } catch (error) {
+        console.error("Error fetching news:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchTechNews();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen text-lg text-gray-500">
+        Loading Tech news...
+      </div>
+    );
+  }
 
   return (
     <>
-    <Header />
-    <div className="news-content">
-      {loading ? (
-        <p>Loading technology news...</p>
-      ) : techNews.length > 0 ? (
-        techNews.map((item, index) => (
-          <div key={index} className="news-card">
-            <div className="news-image">
-              <img src={item.urlToImage || "/placeholder.jpg"} alt={item.title} />
+        <Header/>
+        <div className="px-[100px] bg-gray-50 min-h-screen text-blue py-10">
+          {articles.length === 0 ? (
+            <p className="text-center text-blue-400">No Tech News available.</p>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+              {articles.map((article, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition duration-300"
+                >
+                  {article.urlToImage && (
+                    <img
+                      src={article.urlToImage}
+                      alt={article.title}
+                      className="w-full  h-[300px] object-cover"
+                    />
+                  )}
+                  <div className="p-4">
+                    <h2 className="text-xl font-semibold mb-2">{article.title}</h2>
+                    <p className="text-[#0000ff] text-sm mb-3">
+                      {article.description || "No description available."}
+                    </p>
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#0000ff] hover:underline"
+                    >
+                      Read more →
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="news-text">
-              <h4 className="category-tag">Tech News</h4>
-              <h2 className="news-title">{item.title}</h2>
-              <p className="news-description">{item.description}</p>
-              <a href={item.url} target="_blank" rel="noopener noreferrer">
-                Read more
-              </a>
-            </div>
-          </div>
-        ))
-      ) : (
-        <p>No news articles found.</p>
-      )}
-    </div>
-    </>
-  )
+          )}
+        </div>
+       </>  )
 }
 
