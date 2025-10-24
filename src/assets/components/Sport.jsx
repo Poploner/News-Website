@@ -23,7 +23,7 @@ export default function Sports() {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen text-lg text-gray-500">
-        Loading Sports news...
+        Loading Sports newseses...
       </div>
     );
   }
