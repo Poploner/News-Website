@@ -1,8 +1,4 @@
 import { useEffect, useState } from "react";
-
-
-
-
 export default function Sports() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -27,7 +23,7 @@ export default function Sports() {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen text-lg text-gray-500">
-        Loading Sports news...
+        Loading Sports newseses...
       </div>
     );
   }
@@ -35,7 +31,7 @@ export default function Sports() {
   return (
             <>
             
-            <div className=" px-4 sm:px-8 md:px12 lg:px-[100px]  min-h-screen text-blue py-10 dark:bg-gray-900">
+            <div className=" px-4 sm:px-8 md:px12 lg: px-[100px]  min-h-screen text-blue py-10 dark:bg-gray-900">
       {articles.length === 0 ? (
         <p className="text-center text-blue-400">No Sport News available.</p>
       ) : (

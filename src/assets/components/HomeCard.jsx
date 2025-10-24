@@ -16,11 +16,11 @@ export default function HomeCard() {
 
   return (
     <>
-      <div className="w-full md:w-[70%] grid sm:grid-cols-2 gap-6">
+      <div className="lg:w-[80%] md:w-[70%] lg:grid-cols-3 grid sm:grid-cols-2 gap-6">
         {articles?.slice(0, 6).map((item, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all overflow-hidden"
+            className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all overflow-hidden "
           >
             {item.urlToImage && (
               <img
