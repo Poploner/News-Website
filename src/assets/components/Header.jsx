@@ -101,12 +101,12 @@ export default function Header() {
       >
         {/* Container for Nav Links */}
         <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-6 text-white text-base px-4 lg:px-10">
-          <Link className="text-[1.2rem] hover:font-bold hover:scale-110" to="/">Home</Link>
-          <Link className="text-[1.2rem] hover:font-bold hover:scale-110" to="/Tech">Tech</Link>
-          <Link className="text-[1.2rem] hover:font-bold hover:scale-110" to="/Politics">Politics</Link>
-          <Link className="text-[1.2rem] hover:font-bold hover:scale-110" to="/business">Business</Link>
-          <Link className="text-[1.2rem] hover:font-bold hover:scale-110" to="/hailth">Health</Link>
-          <Link className="text-[1.2rem] hover:font-bold hover:scale-110" to="/sports">Sports</Link>
+          <Link className="text-[1.2rem] active:text-purple- hover:font-bold hover:scale-110" to="/">Home</Link>
+          <Link className="text-[1.2rem] active:text-purple- hover:font-bold hover:scale-110 active:underline"  to="/Tech">Tech</Link>
+          <Link className="text-[1.2rem] active:text-purple- hover:font-bold hover:scale-110" to="/Politics">Politics</Link>
+          <Link className="text-[1.2rem] active:text-purple- hover:font-bold hover:scale-110" to="/business">Business</Link>
+          <Link className="text-[1.2rem] active:text-purple- hover:font-bold hover:scale-110" to="/hailth">Health</Link>
+          <Link className="text-[1.2rem] active:text-purple- hover:font-bold hover:scale-110" to="/sports">Sports</Link>
         </div>
       </nav>
     </header>

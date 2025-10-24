@@ -53,7 +53,7 @@ export default function Home2ca() {
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?category=business&apiKey=70b525d261a74a90a2a95c8fbe5c6eb2"
+      "https://newsapi.org/v2/top-headlines?category=business&apiKey=aa754d4982324255903c14860f2150b4"
     )
       .then((res) => res.json())
       .then((data) => setArticles(data.articles))

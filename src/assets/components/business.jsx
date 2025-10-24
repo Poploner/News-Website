@@ -9,7 +9,7 @@ export default function Business() {
     async function fetchBusinessNews() {
       try {
         const res = await fetch(
-          `https://newsapi.org/v2/top-headlines?category=Business&country=us&apiKey=70b525d261a74a90a2a95c8fbe5c6eb2`
+          `https://newsapi.org/v2/top-headlines?category=Business&country=us&apiKey=aa754d4982324255903c14860f2150b4`
         );
         const data = await res.json();
         setArticles(data.articles || []);
