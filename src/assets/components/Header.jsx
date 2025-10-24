@@ -1,61 +1,3 @@
-
-     
-// import { useState } from "react";
-// import { Link } from "react-router";
-
-// export default function Header() {
-//   const [menuOpen, setMenuOpen] = useState(false);
-
-//   return (
-//     <header className="px-4 lg:px-10 bg-blue-800 dark:bg-blue-600 flex flex-col lg:flex-row justify-between items-center sticky top-0 z-50 py-3 w-full">
-//       {/* Logo and Hamburger */}
-//       <div className="flex items-center justify-between w-full lg:w-auto">
-//         <div className="flex items-center gap-2">
-//           <p className="text-[15px] font-bold text-black bg-white w-[40px] h-[40px] rounded-full flex justify-center items-center">
-//             <img
-//               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABgUlEQVR4AexUMU7DQBAcwwMQDRUS8AIegBCIL9BR0VDRUPANJApKCh5ASUEHNEiUSDwAClokGgoKjlnHZ0Y2Xh+xcVJktXO3t7vZSS5jz2FCNiMe7OKn4arDBhDeiNADbA7nNV+g/uIdti0SfbjNsXmNs5R4vrFrvII7T4mr4x+ZuPsFL8xF17r1x3xlD9v8+wyrseARHwEZm6vABUrTGtiPJrthwbDPPXePOG/4r6UjcbjlFRbAKf5gHYmxRa6IdcbJ3pU4UVz179OROFlcNeaOxLV5yQmPmGJR8cQY5SPxIyyrgf1INo/YxBKFo/uKTNe89UvJDz1iexOpeNpi6/fZpOoR802k4mmLwX4km0ecPGScRo+YYjHRpALsh9rS6BCKPT+95ysXJf7kWd3EouJpi61fP79H1Z8xcUlEf4iBEj/FZE/7AuccEpuE+TWQ3aMwJb5i7px4Jfr0Zw47IXaJ0oU4+wKyA2KZyHrEGmcdEx8QE2LJDhDOiAe45BHFNwAAAP//hYZe+AAAAAZJREFUAwCmgY096ND2FwAAAABJRU5ErkJggg=="
-//               alt="logo"
-//             />
-//           </p>
-//           <span className="inline-block text-white font-bold text-xl cursor-pointer">
-//             NEWS
-//           </span>
-//         </div>
-
-//         {/* Hamburger icon */}
-//         <button
-//           className="lg:hidden text-white text-3xl focus:outline-none"
-//           onClick={() => setMenuOpen(!menuOpen)}
-//         >
-//           {menuOpen ? "✖" : "☰"}
-//         </button>
-//       </div>
-
-//       {/* Navigation */}
-//       <nav
-//         className={`transition-all duration-300 ease-in-out 
-//         flex flex-col items-center w-full 
-//         md:flex-col lg:flex-row 
-//         ${
-//           menuOpen
-//             ? "max-h-[600px] mt-3 p-[20px] bg-blue-600/80 shadow-lg backdrop-blur-md rounded-lg"
-//             : "max-h-0 overflow-hidden lg:max-h-none"
-//         }
-//         lg:justify-center lg:items-center lg:bg-transparent lg:shadow-none lg:p-0`}
-//       >
-//         <div className="flex flex-col lg:flex-row justify-center items-center w-full gap-6 text-white text-base">
-//           <Link className="hover:font-bold hover:scale-110" to="/">Home</Link>
-//           <Link className="hover:font-bold hover:scale-110" to="/Tech">Tech</Link>
-//           <Link className="hover:font-bold hover:scale-110" to="/Politics">Politics</Link>
-//           <Link className="hover:font-bold hover:scale-110" to="/business">Business</Link>
-//           <Link className="hover:font-bold hover:scale-110" to="/hailth">Health</Link>
-//           <Link className="hover:font-bold hover:scale-110" to="/sports">Sports</Link>
-//         </div>
-//       </nav>
-//     </header>
-//   );
-// }
-
 import { useState } from "react";
 import { Link } from "react-router";
 
@@ -63,11 +5,10 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="px-4 lg:px-10 bg-blue-800 dark:bg-blue-600 flex flex-col lg:flex-row justify-between items-center sticky top-0 z-50 py-3 w-full">
-      {/* Logo and Hamburger */}
-      <div className="flex items-center justify-between w-full lg:w-auto">
+    <header className="px-4 md:px-8 md:py-10 lg:px-10 bg-blue-800 dark:bg-blue-600 flex flex-col lg:flex-row justify-between items-center sticky top-0 z-50 py-3 w-full">
+      <div className="flex items-center justify-between w-full lg:w-auto sm:py-12 ">
         <div className="flex items-center gap-2">
-          <p className="text-[15px] font-bold text-black bg-white w-[40px] h-[40px] rounded-full flex justify-center items-center">
+          <p className="text-[15px] font-bold text-black bg-white w-[40px] h-[40px] rounded-full flex justify-center items-center ml-2">
             <img
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABgUlEQVR4AexUMU7DQBAcwwMQDRUS8AIegBCIL9BR0VDRUPANJApKCh5ASUEHNEiUSDwAClokGgoKjlnHZ0Y2Xh+xcVJktXO3t7vZSS5jz2FCNiMe7OKn4arDBhDeiNADbA7nNV+g/uIdti0SfbjNsXmNs5R4vrFrvII7T4mr4x+ZuPsFL8xF17r1x3xlD9v8+wyrseARHwEZm6vABUrTGtiPJrthwbDPPXePOG/4r6UjcbjlFRbAKf5gHYmxRa6IdcbJ3pU4UVz179OROFlcNeaOxLV5yQmPmGJR8cQY5SPxIyyrgf1INo/YxBKFo/uKTNe89UvJDz1iexOpeNpi6/fZpOoR802k4mmLwX4km0ecPGScRo+YYjHRpALsh9rS6BCKPT+95ysXJf7kWd3EouJpi61fP79H1Z8xcUlEf4iBEj/FZE/7AuccEpuE+TWQ3aMwJb5i7px4Jfr0Zw47IXaJ0oU4+wKyA2KZyHrEGmcdEx8QE2LJDhDOiAe45BHFNwAAAP//hYZe+AAAAAZJREFUAwCmgY096ND2FwAAAABJRU5ErkJggg=="
               alt="logo"
@@ -78,7 +19,6 @@ export default function Header() {
           </span>
         </div>
 
-        {/* Hamburger icon */}
         <button
           className="lg:hidden text-white text-3xl focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -87,20 +27,18 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Navigation */}
       <nav
         className={`transition-all duration-300 ease-in-out 
         flex flex-col items-center w-full 
         md:flex-col lg:flex-row 
         ${
           menuOpen
-            ? "max-h-[600px] mt-3 p-[20px] bg-blue-600/80 shadow-lg backdrop-blur-md rounded-lg"
+            ? "max-h-[600px] p-[20px] bg-blue-600/80 shadow-lg backdrop-blur-md rounded-lg"
             : "max-h-0 overflow-hidden lg:max-h-none"
         }
         lg:justify-between lg:items-center lg:bg-transparent lg:shadow-none lg:p-0`}
       >
-        {/* Container for Nav Links */}
-        <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-6 text-white text-base px-4 lg:px-10">
+        <div className=" md:text-[12px] lg:text-[15px] md:gap-2 flex flex-col lg:flex-row justify-between items-center w-full gap-6 text-white text-base px-4 lg:px-10">
           <Link className="hover:font-bold hover:scale-110" to="/">Home</Link>
           <Link className="hover:font-bold hover:scale-110" to="/Tech">Tech</Link>
           <Link className="hover:font-bold hover:scale-110" to="/Politics">Politics</Link>
