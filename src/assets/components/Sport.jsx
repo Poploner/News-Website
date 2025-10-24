@@ -37,7 +37,7 @@ export default function Sports() {
             
             <div className=" px-4 sm:px-8 md:px12 lg:px-[100px]  min-h-screen text-blue py-10 dark:bg-gray-900">
       {articles.length === 0 ? (
-        <p className="text-center text-blue-400">No Sport articles available.</p>
+        <p className="text-center text-blue-400">No Sport News available.</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6  ">
           {articles.map((article, index) => (
