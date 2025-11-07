@@ -23,6 +23,8 @@ export default function App () {
             <Route path="/business" element={<Business />} />
             </Routes>
             <Footer />
+            {/* <Route path="/business" element={<Business />} /> testing */}
+
             
         </>
     )
